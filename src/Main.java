@@ -1,11 +1,6 @@
-
-// Lab1 + Lab2: Introducere în Java
-// Clase și metode simple pentru a lucra cu date despre studenți
-
 import java.io.*;
 import java.util.*;
 
-// Lab4: Clase Java
 abstract class Persoana {
     protected String nume;
     protected int varsta;
@@ -52,7 +47,6 @@ class Student extends Persoana {
     }
 }
 
-// Lab6: Interfață pentru salvare și încărcare
 interface Persistenta {
     void salveaza(String fisier) throws IOException;
     void incarca(String fisier) throws IOException;
@@ -107,7 +101,6 @@ public class Main {
     public static void main(String[] args) {
         GestionareStudenti gestionare = new GestionareStudenti();
 
-        // Creăm câțiva studenți
         Student s1 = new Student("Ion Popescu", 20);
         s1.adaugaNota(8);
         s1.adaugaNota(9);
@@ -119,12 +112,10 @@ public class Main {
         gestionare.adaugaStudent(s1);
         gestionare.adaugaStudent(s2);
 
-        // Afisăm detalii
         for (Student student : gestionare.getStudenti()) {
             student.afiseazaDetalii();
         }
 
-        // Persistența datelor
         try {
             gestionare.salveaza("studenti.txt");
             System.out.println("Datele au fost salvate.");
