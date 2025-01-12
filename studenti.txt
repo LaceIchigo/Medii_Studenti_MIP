@@ -1,0 +1,2 @@
+Ion Popescu,20,[8, 9]
+Maria Ionescu,22,[10, 9]
